@@ -36,11 +36,17 @@ git clone ssh://git@bitbucket.scm.otto.de/pport/lsb2-config-data.git
 git clone ssh://git@bitbucket.scm.otto.de/pport/lsb2-eureka-server.git  
 git clone ssh://git@bitbucket.scm.otto.de/pport/lsb2-hystrix-dashboard.git  
 ```
-To startup all components run this command from the checkout directory
-
-@TODO: add commandline details
-
-To stop all components just run:
+To startup all components run this commands from the checkout directory.  
+First startup the config server and basic infrastructure (mongodb and rabbitmq).  
+```
+docker-compose -f lsb2-config-server/docker/env/local.yml up -d
+curl http://localhost:8888/actuator/health
+```
+After startup you can setup the other services:  
+```
+find lsb2-* -name local.yml -exec docker-compose -f {} up -d \;
+```
+To stop all components just run:  
 ```
 find ./lsb2-* -name 'local.yml' -exec docker-compose -f {} stop \;  
 ```
