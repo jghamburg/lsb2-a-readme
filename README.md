@@ -73,3 +73,14 @@ setup properly.
 * encrypted data  
 * multiple replicasets for failover scenarios  
 
+## References used  
+
+A list of references used to improve and extend the project:  
+
+### Docker  
+
+Improve Docker management like creation of images.  
+* [Best practice for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#general-guidelines-and-recommendations)
+* [apk best practices](https://github.com/gliderlabs/docker-alpine/blob/master/docs/usage.md)
+
+
