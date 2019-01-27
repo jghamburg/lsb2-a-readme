@@ -28,33 +28,40 @@ If you like to get a first impression on the application you have to follow thes
 Checkout all repos starting with lsb2-* to a local directory
 
 ```
-git clone ssh://git@bitbucket.scm.otto.de/pport/lsb2-chat.git  
-git clone ssh://git@bitbucket.scm.otto.de/pport/lsb2-comments.git  
-git clone ssh://git@bitbucket.scm.otto.de/pport/lsb2-images.git  
-git clone ssh://git@bitbucket.scm.otto.de/pport/lsb2-config-server.git  
-git clone ssh://git@bitbucket.scm.otto.de/pport/lsb2-config-data.git  
-git clone ssh://git@bitbucket.scm.otto.de/pport/lsb2-eureka-server.git  
-git clone ssh://git@bitbucket.scm.otto.de/pport/lsb2-hystrix-dashboard.git  
+git clone https://github.com/jghamburg/lsb2-chat.git  
+git clone https://github.com/jghamburg/lsb2-comments.git  
+git clone https://github.com/jghamburg/lsb2-images.git  
+git clone https://github.com/jghamburg/lsb2-config-server.git  
+git clone https://github.com/jghamburg/lsb2-config-data.git  
+git clone https://github.com/jghamburg/lsb2-eureka-server.git  
+git clone https://github.com/jghamburg/lsb2-hystrix-dashboard.git  
 ```
 To startup all components run this commands from the checkout directory.  
 First startup the config server and basic infrastructure (mongodb and rabbitmq).  
+
 ```
 docker-compose -f lsb2-config-server/docker/env/local.yml up -d
 curl http://localhost:8888/actuator/health
 ```
+
 After startup you can setup the other services:  
+
 ```
 find lsb2-* -name local.yml -exec docker-compose -f {} up -d \;
 ```
+
 To stop all components just run:  
 ```
 find ./lsb2-* -name 'local.yml' -exec docker-compose -f {} stop \;  
 ```
+
 ## Startup on kubernetes  
+
 If you have provided a stable infrastructure using docker-compose and now want to experiment with kubernetes  
 -- Just do it!  
 If you are using docker for desktop (Mac and Windows) and you are using the experimental support for kubernetes   
 you can deploy your apps using `docker stack`command.  
+
 ```
 docker stack deploy  --compose-file lsb2-config-server/docker/env/local.yml --namespace local --orchestrator kubernetes config-server
 docker stack deploy  --compose-file lsb2-eureka-server/docker/env/local.yml --orchestrator kubernetes eureka-server
@@ -65,18 +72,24 @@ docker stack deploy  --compose-file lsb2-comments/docker/env/local.yml --orchest
 kubectl get pod
 kubectl get deployment
 ```
+
 Don't forget to install and use the kubernetes dashboard:  
+
 ```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml  
 ```
+
 and startup the local proxy in a separate terminal window  
+
 ```
 kubectl proxy 
 ```
+
 Now you should be able to see and access your instances.
 
 
-**References**:  
+## References
+  
 [Docker-Compose and Kubernetes](https://blog.docker.com/2018/05/kubecon-docker-compose-and-kubernetes-with-docker-for-desktop/)  
 [Kubernetes dashboard](https://github.com/kubernetes/dashboard)  
 
