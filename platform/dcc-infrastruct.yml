@@ -1,0 +1,23 @@
+# environment variables for any dev environment
+version: '3.1'
+
+services:
+  # service name has to be environment-unique, else one startup will shutdown others
+  local-mongo-server:
+    image: "mongo:3.6"
+    ports:
+      - "27017:27017"
+    networks:
+      - learn-ms-network
+
+  local-rabbitmq:
+    image: "rabbitmq:3.7-management-alpine"
+    ports:
+      - "5672:5672" # web port
+      - "15672:15672" # web management port
+    networks:
+      - learn-ms-network
+
+networks:
+  learn-ms-network:
+    external: true

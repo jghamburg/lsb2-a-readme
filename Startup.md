@@ -3,7 +3,13 @@
 ## Startup using docker compose  
 
 To startup all components run this commands from the checkout directory.  
-First startup the config server and basic infrastructure (mongodb and rabbitmq).  
+First startup the basic infrastructure (mongodb and rabbitmq).  
+
+```
+docker-compose -f lsb2-a-readme/platform/dcc-infrastruct.yml up -d
+```
+
+Next startup the spring cloud config server.  
 
 ```
 docker-compose -f lsb2-config-server/docker/env/local.yml up -d
