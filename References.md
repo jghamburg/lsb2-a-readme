@@ -23,8 +23,11 @@ Improve Docker management like creation of images.
 ### Build Tools  
 
 * [Gradle](https://gradle.org/)
+* [Importing version recommendations from a Maven BOM](https://docs.gradle.org/current/userguide/managing_transitive_dependencies.html#sec:bom_import)
 
 #### Plugins  
 
 * [Gradle Lombok Plugin](https://github.com/franzbecker/gradle-lombok)  
 * [Jib - Create Docker Container easily](https://github.com/GoogleContainerTools/jib/tree/master/jib-gradle-plugin#example)  
+* [gradle docker-compose plugin](https://github.com/avast/gradle-docker-compose-plugin)
+

@@ -14,12 +14,12 @@ a lot of specialties used by my team to
 
 * setup a local development environment  
 * provide different deployment stages  
-* use different orchestration toos  
+* use different orchestration tools  
 
-To support all of this I jumped right into the first code which sounded like the way I wnated 
+To support all of this I jumped right into the first code which sounded like the way I wanted 
 it to be on an architectural point of view. So the code in these repositories is based on the results of chapter 9.  
 
-The first addition after upgrading to spring-boot 2.0.4.RELASE was to containerize with __docker__ and startup the environment via __docker-compose__.  
+The first addition after upgrading to spring-boot 2.1.2.RELASE was to containerize with __docker__ and startup the environment via __docker-compose__.  
 
 ## Starter  
 
@@ -44,3 +44,6 @@ git clone https://github.com/jghamburg/lsb2-hystrix-dashboard.git
 * [References](./References.md)  
 * [Open Issues and Ideas for the future](./Issues.md)
 
+## Tools of Interest  
+
+As build tool I use gradle version 5.x.  You find interesting references on setting up build files in the reference section.
