@@ -47,3 +47,10 @@ git clone https://github.com/jghamburg/lsb2-hystrix-dashboard.git
 ## Tools of Interest  
 
 As build tool I use gradle version 5.x.  You find interesting references on setting up build files in the reference section.
+
+## Migration to Java 11  
+
+Because java 8 will reach end of public support soon I started out on migration concepts from java 8 to java 11.  
+This migration contains details about java module support also.  
+
+

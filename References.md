@@ -30,4 +30,4 @@ Improve Docker management like creation of images.
 * [Gradle Lombok Plugin](https://github.com/franzbecker/gradle-lombok)  
 * [Jib - Create Docker Container easily](https://github.com/GoogleContainerTools/jib/tree/master/jib-gradle-plugin#example)  
 * [gradle docker-compose plugin](https://github.com/avast/gradle-docker-compose-plugin)
-
+* [gradle updates plugin](https://github.com/ben-manes/gradle-versions-plugin)
