@@ -27,7 +27,7 @@ If you like to get a first impression on the application you can follow these st
 
 Checkout all repos starting with lsb2-* to a local directory
 
-```
+```bash
 git clone https://github.com/jghamburg/lsb2-chat.git  
 git clone https://github.com/jghamburg/lsb2-comments.git  
 git clone https://github.com/jghamburg/lsb2-images.git  
@@ -46,7 +46,8 @@ git clone https://github.com/jghamburg/lsb2-hystrix-dashboard.git
 
 ## Tools of Interest  
 
-As build tool I use gradle version 5.x.  You find interesting references on setting up build files in the reference section.
+As build tool I use gradle version 5.x.  You find interesting references on setting up build files in the reference section.  
+The major interest is to provide a single point of administration for all important tasks within the software lifecycle. This contains especially all tasks on building and deploying of components through the use of gradle.  
 
 ## Migration to Java 11  
 
