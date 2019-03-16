@@ -38,4 +38,5 @@ Improve Docker management like creation of images.
 * [Jib - Create Docker Container easily](https://github.com/GoogleContainerTools/jib/tree/master/jib-gradle-plugin#example)  
 * [gradle helm plugin by unbroken-dome](https://github.com/unbroken-dome/gradle-helm-plugin)
 * [gradle helm plugin by unbroken-dome - detailed user documentation](https://unbroken-dome.github.io/projects/gradle-helm-plugin/)
+* [gradle helm plugin by unbroken-dome - known issue on publishing](https://github.com/unbroken-dome/gradle-helm-plugin/issues/8)
 * [gradle helm plugin by wfhardford](https://github.com/wfhartford/gradle-helm)

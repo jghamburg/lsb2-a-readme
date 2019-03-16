@@ -57,4 +57,7 @@ and startup the local proxy in a separate terminal window
 kubectl proxy 
 ```
 
-Now you should be able to see and access your instances.
+Now you should be able to see and access your instances.  
+
+A more thoroughly described k8s deployment intro can be found is described [here](./platform/k8s/README.md).  
+
