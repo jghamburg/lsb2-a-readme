@@ -1,0 +1,30 @@
+{
+  "kind": "Service",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "rabbitmq-ha-http",
+    "namespace": "develop",
+    "selfLink": "/api/v1/namespaces/local/services/rabbitmq-ha-http",
+    "labels": {
+      "app": "rabbitmq-ha",
+      "chart": "rabbitmq-ha-1.12.1",
+      "heritage": "Tiller",
+      "release": "rabbitmq-ha"
+    }
+  },
+  "spec": {
+    "ports": [
+      {
+        "name": "http",
+        "protocol": "TCP",
+        "port": 80,
+        "targetPort": "http"
+      }
+    ],
+    "selector": {
+      "app": "rabbitmq-ha",
+      "release": "rabbitmq-ha"
+    },
+    "type": "ClusterIP"
+  }
+}
