@@ -5,10 +5,10 @@
 For installation on a local machine startup with reduced resources  
 
 ```bash
-helm upgrade --install --namespace local \
-  --set fullnameOverride=local-rabbitmq,replicaCount=1\
+helm upgrade --install --namespace default \
+  --set fullnameOverride=rabbitmq,replicaCount=1\
 ,rabbitmqUsername=guest,rabbitmqPassword=guest \
-  --values values.yaml local-rabbitmq stable/rabbitmq-ha
+  --values values.yaml default-rabbitmq stable/rabbitmq-ha
 ```
 
 ## updates

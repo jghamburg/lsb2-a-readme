@@ -1,7 +1,7 @@
 # Installing NginX Ingress Controller  
 
 ```bash
-helm install --name ng stable/nginx-ingress -f values-local.yaml
+helm upgrade --install ng stable/nginx-ingress -f values.yaml
 ```
 
 ## Known Challenges  

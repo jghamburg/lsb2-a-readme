@@ -3,7 +3,7 @@
 ## Installation  
 
 ```
-helm upgrade chartmuseum stable/chartmuseum --install --force --values local-storage.yaml --namespace local
+helm upgrade chartmuseum stable/chartmuseum --install --force --values local-storage.yaml --namespace default
 ```
 
 ## References  

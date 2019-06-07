@@ -1,7 +1,7 @@
 ## RabbitMQ application credentials
 ## Ref: http://rabbitmq.com/access-control.html
 ##
-fullnameOverride: "local-rabbitmq"
+fullnameOverride: "rabbitmq"
 
 rabbitmqUsername: guest
 # rabbitmqPassword:

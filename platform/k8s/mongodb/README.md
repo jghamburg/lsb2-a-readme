@@ -1,7 +1,12 @@
 # use mongodb under k8s  
 
 ```bash
-helm upgrade --install --namespace local --values values.yaml \
-  local-mongo-server stable/mongodb
+helm upgrade --install --namespace default --values values.yaml default-mongo-server stable/mongodb
+```
+
+Startup with replicaset enabled  
+
+```bash
+helm upgrade --install --namespace default --values values.yaml --set replicaSet.enabled=true default-mongo-server stable/mongodb
 ```
 

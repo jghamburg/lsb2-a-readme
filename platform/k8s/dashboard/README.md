@@ -11,6 +11,8 @@ kubectl cluster-info
 # To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 
 # install dashboard
+kubectl apply -f admin-user.yaml
+kubectl apply -f ClusterRoleBinding.yaml
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
 # cause k8s api server is - per default - available only on local machine (where it is installed AND for security reasons) run proxy
 kubectl proxy &
