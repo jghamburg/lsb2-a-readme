@@ -37,6 +37,29 @@ git clone https://github.com/jghamburg/lsb2-eureka-server.git
 git clone https://github.com/jghamburg/lsb2-hystrix-dashboard.git  
 ```
 
+## The Architecture  
+
+```
+
+																		|--------------------|
+																		|       User         |
+																		|--------------------|
+
+|---------------------|							|--------------------|
+| config-server:8888  |							|     chat:9999      |
+|---------------------|             |--------------------|
+
+|---------------------|             |--------------------|             |--------------------|
+| eureka-server:8761  |             |   images:8200      |             |   mongodb:27017    |
+|---------------------|             |--------------------|             |--------------------|
+
+|---------------------|             |--------------------|             |--------------------|
+| hystrix-server:7979 |             |  comments:9000     |             |  rabbitmq:5672     |
+|---------------------|             |--------------------|             |--------------------|
+
+
+```
+
 ## Whats next?  
 
 * [How to startup the application](./Startup.md)  
