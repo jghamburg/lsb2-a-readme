@@ -5,10 +5,12 @@
 For installation on a local machine startup with reduced resources  
 
 ```bash
+helm repo add bitnami	https://charts.bitnami.com/bitnami
+#
 helm upgrade --install --namespace default \
   --set fullnameOverride=rabbitmq,replicaCount=1\
 ,rabbitmqUsername=guest,rabbitmqPassword=guest \
-  --values values.yaml default-rabbitmq stable/rabbitmq-ha
+  --values values.yaml default-rabbitmq bitnami/rabbitmq
 ```
 
 ## updates
@@ -20,7 +22,7 @@ export ERLANGCOOKIE=$(kubectl get secrets -n <NAMESPACE> <HELM_RELEASE_NAME>-rab
 helm upgrade --name <HELM_RELEASE_NAME> \
     --set rabbitmqErlangCookie=$ERLANGCOOKIE \
     --set fullnameOverride=rabbitmq-ha \
-    stable/rabbitmq-ha
+    bitnami/rabbitmq
 ```
 
 ## Extras  
